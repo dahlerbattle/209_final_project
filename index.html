@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Covid Vax Viz</title>
+    <link rel = "stylesheet"
+      type = "text/css"
+      href = "./css/style.css" />
+    <script src="./js/stickynav.js" async>
+    </script>
+  </head>
+
+  <body id="top">
+    <div class="fixed">
+    </div>
+   <div id="scroll">
+     <header>
+       <div id="navbar" class="navigation">
+         <nav class=navlink>
+            <li><a href="#top">home</a></li>
+            <li><a href="#vaxviz">vax data</a></li>
+            <li><a href="#about">about</a></li>
+          </nav>
+       </div>
+       <div id="redbox" class="redbox">
+       </div>
+
+    </header>
+
+      <main class="lightgray">
+        <section id="Vaccination Exploration" class="rtmargin500">
+          <br>
+          <h2>Are vaccinations safe?</h2>
+          As of December 1st, 2021, 40% of the US population is not fully vaccinated.
+          There is much debate over the efficacy and safety of the vaccine itself,
+          so we offer the opportunity to explore some of the more concerning data and
+          objectively explore the dangers of COVID-19 against the possible
+          dangers of the vaccine.
+          <br>
+          <br>
+          We'll look at three separate datasets in this exploration. To view covid
+          deaths, we'll use the
+          <a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Week-Sex-and-Age/vsak-wrfu"
+            target="_blank">CDC's COVID-19 Deaths by Week, Sex, and Age</a> dataset,
+          to take a deep dive into vaccination rates, we'll use the
+          <a href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc/data"
+              target="_blank">CDC's COVID-19 Vaccinations in the United States</a> dataset,
+          and to explore alleged adverse effects from the vaccine, we'll use the
+          <a href="https://vaers.hhs.gov/reportevent.html"
+              target="_blank">US Dept of Health & Human Services Vaccine Adverse Event Reporting System (VAERS)</a> dataset.
+          It's worth noting that the VAERS dataset is not new- it's been around since 1990
+          to be used as an early indicator for any potentially dangerous vaccination
+          side effects, and it is a completely voluntary system. Any individual could
+          falsely report an adverse reaction, and that false information would forever
+          stay in the database. We absolutely encourage you to read the disclaimer on their
+          website to understand the limitations of the dataset.
+          <br>
+          <br>
+          Even with these limitaions in the dataset, we chose to explore VAERS because
+          it's been widely touted as proof that the vaccine is indeed dangerous. Not
+          ones to take another's word for it, we decided to dig in on our own, and share
+          our findings with you!
+          <br>
+          <br>
+          <br>
+          <h2>COVID-19 Deaths vs Vaccine Deaths</h2>
+          In the visualizations below, we compare the number of US COVID-19 deaths
+          against the entire US population- not just those who have gotten sick.
+          Bearing that in mind, please continue reading to compare the vaccine
+          symptoms against the percent of the population that has died from COVID-19.
+          <br>
+          <br>
+          <br>
+
+            <div class="tab">
+              <button class="tablinks" onclick="openTab(event, 'age')" id="defaultOpen">age</button>
+              <button class="tablinks" onclick="openTab(event, 'manufacturer')">manufacturers</button>
+            </div>
+
+          <!-- Tab content -->
+            <div id="age" class="tabcontent">
+              <h3>Age</h3>
+              <p>age vis here.</p>
+            </div>
+
+            <div id="manufacturer" class="tabcontent">
+              <h3>Manufacturer</h3>
+              <p>manufacturer vis here.</p>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>Vaccine Adverse Reactions</h2>
+            In this visualization, we explore the number and prevelance of vaccine reactions
+            as a whole against the total vaccinated population in the US.
+            <br>
+            <br>
+            <br>
+
+              <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'age')" id="defaultOpen">age</button>
+                <button class="tablinks" onclick="openTab(event, 'manufacturer')">manufacturers</button>
+              </div>
+
+            <!-- Tab content -->
+              <div id="age" class="tabcontent">
+                <h3>Age</h3>
+                <p>age vis here.</p>
+              </div>
+
+              <div id="manufacturer" class="tabcontent">
+                <h3>Manufacturer</h3>
+                <p>manufacturer vis here.</p>
+              </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>Vaccine Symptom Exploration and Breakdown</h2>
+            Let's take a look at which symptoms were most commonly reported.
+
+            <br>
+            <br>
+
+          </p>
+        </section>
+
+        <section id="about" class="margin0white">
+          <br>
+          <h2>about us</h2>
+          We're a team of students from the UC Berkeley Master's in Data Science
+          and information program.
+
+          </p>
+        </section>
+
+      </main>
+
+      <footer>
+        <span>
+          <p>
+          Created by:
+          <a href="mailto:dahler.battle@berkeley.edu">Dahler Battle</a>,
+          <a href="mailto:emily.brantner@berkeley.edu">Emily Brantner</a>,
+          <a href="mailto:nicole.chen@berkeley.edu">Nicole Chen</a>, and
+          <a href="mailto:menglu.he@berkeley.edu">Menglu He</a>
+          </p>
+        </span>
+      </footer>
+    </div>
+
+  </body>
+
+</html>
