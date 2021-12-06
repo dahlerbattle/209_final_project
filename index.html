@@ -31,28 +31,31 @@
           <div id="vaxviz" class="rtmargin500">
           <br>
           <h2>Are vaccinations safe?</h2>
-          As of December 1st, 2021, <a href="https://www.mayoclinic.org/coronavirus-covid-19/vaccine-tracker">40% of the US population</a> is not fully vaccinated.
+          According to the CDC, as of December 1st, 2021, 40% of the US population is not fully vaccinated.
           There is much debate over the efficacy and safety of the vaccine itself,
-          so we offer the opportunity to objectively explore the dangers of COVID-19 
-          against the possible dangers of the vaccine.
-            
+          so we offer the opportunity to explore some of the more controversial and
+          misunderstood data to
+          objectively explore the dangers of COVID-19 against the possible
+          dangers of the vaccine.
           <br>
           <br>
           We'll look at three separate datasets in this exploration. To view covid
           deaths, we'll use the
           <a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Week-Sex-and-Age/vsak-wrfu"
-            target="_blank">CDC's COVID-19 Deaths by Week, Sex, and Age</a> dataset,
+            target="_blank">CDC's COVID-19 Deaths by Week, Sex, and Age</a> dataset, and
           to take a deep dive into vaccination rates, we'll use the
           <a href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc/data"
-              target="_blank">CDC's COVID-19 Vaccinations in the United States</a> dataset,
-          and to explore alleged adverse effects from the vaccine, we'll use the
+              target="_blank">CDC's COVID-19 Vaccinations in the United States</a> dataset.
+          We chose the CDC data because it is the most objective and vetted vaccination record
+          and COVID-19 deaths record available.
+          To explore alleged adverse effects from the vaccine, we'll use the
           <a href="https://vaers.hhs.gov/reportevent.html"
               target="_blank">US Dept of Health & Human Services Vaccine Adverse Event Reporting System (VAERS)</a> dataset.
           It's worth noting that the VAERS dataset is not new- it's been around since 1990
           to be used as an early indicator for any potentially dangerous vaccination
-          side effects. It is a completely self-reported and voluntary system. Any individual could
-          falsely report an adverse reaction, and that false information would forever
-          stay in the database. We absolutely encourage you to read the disclaimer on their
+          side effects, and it is a completely voluntary system, so we would expect
+          some bias and innacuracies in the data. We absolutely encourage you to
+          read the disclaimer on their
           website to understand the limitations of the dataset.
           <br>
           <br>
@@ -70,7 +73,10 @@
           <br>
           <h2>COVID-19 Deaths vs Vaccine Deaths</h2>
           In the visualizations below, we compare the number of US COVID-19 deaths
-          against the entire US population- not just those who have gotten sick.
+          against the entire US population- not just those who have gotten sick. This
+          allows us to look at a person's changes of both contracting AND dying of COVID-19,
+          since not every individual will contract COVID and many non-symptomatic cases will
+          go undetected.
           Bearing that in mind, please continue reading to compare the vaccine
           symptoms against the percent of the population that has died from COVID-19.
           <br>
@@ -95,7 +101,8 @@
                 death rate.
                 <br><br>
 
-                Hover over the chart for additinonal details.</p>
+                Hover over the chart for more details and be sure to read the
+                additional instructions under each chart title! </p>
                 <br><br>
 
                 <h3>Percent of Deaths by Age Group</h3>
@@ -154,7 +161,8 @@
               death rate.
               <br><br>
 
-              Hover over the chart for additional details.</p>
+              Hover over the chart for more details and be sure to read the
+              additional instructions under each chart title!</p>
               <br><br>
 
               <h3>Percent of Deaths by Manufacturer</h3>
@@ -230,7 +238,8 @@ src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_weekly_deaths"><
                   at fully vaccinated or partial vaccinated individuals.
                   <br><br>
 
-                  Hover over the chart for additional details.</p>
+                  Hover over the bottom chart for more details and be sure to read the
+                  additional instructions under each chart title!</p>
                   <br><br>
 
                   <h3>Cumulative percent of vaccine reaction severity by age</h3>
@@ -255,7 +264,8 @@ src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_weekly_deaths"><
                   at fully vaccinated or partial vaccinated individuals.
                   <br><br>
 
-                  Hover over the chart for additional details.</p>
+                  Hover over the bottom chart for more details and be sure to read the
+                  additional instructions under each chart title!</p>
                   <br><br>
 
                   <h3>Cumulative percent of vaccine reaction severity by Manufacturer</h3>
@@ -279,24 +289,69 @@ src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_weekly_deaths"><
 
 
             <h2>Vaccine Symptom Exploration and Breakdown</h2>
-              <p>Let&apos;s take a look at which symptoms were most commonly reported in the VAERS dataset.</p>
-              <p><strong>Instructions:&nbsp;</strong>The crossfilter chart explores most common symptoms across manufacturer, dosage series, severity, and age range. You can filter across multiple variables by clicking and dragging your mouse across the columns that you would like to filter further. For example, if you click and drag over &quot;Moderna&quot; and &quot;Dose 2&quot; on the first two plots you should that the most common symptom is pyrexia, or a fever.&nbsp;</p>
-              <p><strong>Medical Terminology Definitions:&nbsp;</strong></p>
-              <ol>
-                 <li><span id="isPasted" style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Pyrexia: Raised body temperature; fever</span></li>
-                 <li><span id="isPasted" style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Myalgia: Muscle pain or group of muscle pain</span></li>
-                 <li><span id="isPasted" style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Arthralgia: Join pain</span></li>
-              </ol>
+            <p>Let's take a look at which symptoms were most commonly reported. The
+            crossfilter chart explores most common symptoms across manufacturer,
+            dosage series, severity, and age range. You can filter across multiple variables
+            by clicking and dragging your mouse across the columns that you would
+            like to filter further. For example, if you click and drag over "Moderna"
+            and "Dose 2" on the first two plots you should that the most common
+            symptom is pyrexia, or a fever.
+          <br><br>
+            <b>Medical Terminology</b>
+              <li>Pyrexia: Raised body temperature; fever </li>
+              <li>Myalgia: Muscle pain or group of muscle pain </li>
+              <li> Arthralgia: Join pain </li>
+
+          </p>
 
             <iframe width="100%" height="500" frameborder="0"
   src="https://observablehq.com/embed/@berkeleyvis/dbcrossfilter?cells=svg"></iframe>
 </div>
-
+            <div class="leftrightmargin">
             <br>
             <br>
-
-          </p>
+            <div class="rtmargin500">
+            <p> Lastly, we'll look at the symptoms breakdown in the VAERS dataset
+            against published CDC data. The figure on the right (or below, depending your screen layout)
+             is from a <a href="https://www.medrxiv.org/content/10.1101/2021.10.10.21264827v2.full-text"
+             target="_blank">MedRxiv preliminary report </a> regarding booster vaccinations.
+             It shows symptoms reported 7 days following a booster from a given manufacturer
+             given a primary vaccination from a given manufacturer (not necessarily the
+             same manufacturer as the booster). Row A shows symptoms reported by individuals
+             that received the mRNA-1273 booster and are split into 3 charts based on the
+             primary vaccination received prior to the booster. Similarly, Row B and Row C
+             show symptoms reported by individuals that received the Ad26.COV2.S and
+             BNT162b2 booster respectively. For clarity, the vaccination manufacturers
+             are as follow:
+             <br>
+             <br>
+              <li>mRNA-1273 = Moderna </li>
+              <li>Ad26.COV2.S = Janssen</li>
+              <li>BNT162b2 = Pfizer/BioNTech</li>
+              <br>
+            Symptoms were graded as mild (does not interfere with activity), moderate (interferes
+             with activity), or severe (prevents daily activity).
+             <br>
+             <br>
+            This figure is provided as a comparison and reference for the left or top (depending
+            on layout) visualization of top symptoms from each manufacturer reported from the VAERS
+            dataset. Though this figure looks at symptoms from a booster shot rather than from
+            the primary vaccination regimen, it is provided to show that primary symptoms reported
+            between the VAERS data and CDC vetted data are comparable. Furthermore it confirms the
+            results from the VAERs symptom visualization that primary reactions are mild and non-life-threatening.  </p>
           </div>
+
+            <div align="center">
+            <div class="inline">
+              <iframe width="800" height="993" frameborder="0"
+  src="https://observablehq.com/embed/@mengluhe/vaccine-reactions-by-manufacturer?cells=vac_reaction_manu"></iframe>
+            </div>
+            <div class="inline">
+              <img src="./img/CDC_symptoms.jpg" width="800">
+            </div>
+
+          </div>
+        </div>
         </section>
 
         <section id="about" class="margin0white">
