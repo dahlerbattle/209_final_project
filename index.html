@@ -27,7 +27,8 @@
     </header>
 
       <main class="lightgray">
-        <section id="Vaccination Exploration" class="rtmargin500">
+        <section id="Vaccination Exploration">
+          <div id="vaxviz" class="rtmargin500">
           <br>
           <h2>Are vaccinations safe?</h2>
           As of December 1st, 2021, 40% of the US population is not fully vaccinated.
@@ -55,10 +56,15 @@
           website to understand the limitations of the dataset.
           <br>
           <br>
-          Even with these limitaions in the dataset, we chose to explore VAERS because
+          Even with these limitations in the dataset, we chose to explore VAERS because
           it's been widely touted as proof that the vaccine is indeed dangerous. Not
           ones to take another's word for it, we decided to dig in on our own, and share
           our findings with you!
+          <br><br>
+          Our cleaned age group data can be found <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTSjVyRFcA3rhtm3h9zleHSMEj1hzdhTVBcbcx-RkNo1n0FVX1_FWihsb3DxbpuZc4iAdbSxq8zY3gO/pub?gid=1739373497&single=true&output=csv"
+              target="_blank">here</a>, and our cleaned manufacturer
+          data can be found <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQd0dY7alEBKCvEul1R65Z8SG1mTq_sszSFkIyOtJ4cmSd-vHR91TC9UtWV6fbDmy_frVLZu2-x9S3x/pub?gid=914218686&single=true&output=csv"
+              target="_blank">here</a>.
           <br>
           <br>
           <br>
@@ -70,7 +76,9 @@
           <br>
           <br>
           <br>
+        </div>
 
+        <div class="leftrightmargin">
             <div class="tab">
               <button class="tablinks" onclick="openTab(event, 'age')" id="defaultOpen">age</button>
               <button class="tablinks" onclick="openTab(event, 'manufacturer')">manufacturers</button>
@@ -78,17 +86,126 @@
 
           <!-- Tab content -->
             <div id="age" class="tabcontent">
-              <h3>Age</h3>
-              <p>age vis here.</p>
+              <div class="rtmargin500">
+                <p>To interact with the visualizations, select an age group from the
+                drop down menu to see the time series of percentage of COVID deaths vs.
+                vaccine deaths for that age group. You can also choose whether you want to look
+                at fully vaccinated or partial vaccinated individuals, which will only affect the
+                vaccination numbers, since vaccines are not considered in the overal COVID-19
+                death rate.
+                <br><br>
+
+                Hover over the chart for additinonal details.</p>
+                <br><br>
+
+                <h3>Percent of Deaths by Age Group</h3>
+                <p>Covid death percentages are calculated based on the entire US population.
+                Vaccination deaths, on the other hand, are only calculated based on the
+                total vaccinated population as the denominator. As more people get vaccinated,
+                the number grows. That's why our cumulative value is able to drop.
+                <br><br></p>
+
+              </div>
+              <div align="center">
+                <div class="inline">
+                  <iframe width="810" height="910" frameborder="0"
+    src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=age_cumu_percent_deaths%2Cviewof+symbolLegend"></iframe>
+                </div>
+
+                <div class="inline">
+                  <iframe width="810" height="820" frameborder="0"
+    src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=age_weekly_percent_deaths"></iframe>
+                </div>
+              </div>
+
+              <br><br>
+
+              <div class="rtmargin500">
+              <h3>Counts of Deaths by Age Group</h3>
+              <p>Comparative counts of deaths from COVID-19 and alleged deaths from
+                the vaccine, according to the VAERS dataset.
+              <br><br></p>
             </div>
 
-            <div id="manufacturer" class="tabcontent">
-              <h3>Manufacturer</h3>
-              <p>manufacturer vis here.</p>
+              <div align="center">
+                <div class="inline">
+                  <iframe width="810" height="880" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=viewof+symbolLegend%2Cage_cumu_deaths"></iframe>
+                </div>
+
+                <div class="inline">
+                  <iframe width="810" height="790" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=age_weekly_deaths"></iframe>
+                </div>
+              </div>
+              </div>
+
+
+
+
+
+          <div id="manufacturer" class="tabcontent">
+            <div class="rtmargin500">
+              <p>To interact with the visualizations, select a vaccine manufacturer from the
+              drop down menu to see the time series of percentage of COVID deaths vs.
+              vaccine deaths for that manufacturer. You can also choose whether you want to look
+              at fully vaccinated or partial vaccinated individuals, which will only affect the
+              vaccination numbers, since vaccines are not considered in the overal COVID-19
+              death rate.
+              <br><br>
+
+              Hover over the chart for additional details.</p>
+              <br><br>
+
+              <h3>Percent of Deaths by Manufacturer</h3>
+              <p>Covid death percentages are calculated based on the entire US population.
+              Vaccination deaths, on the other hand, are only calculated based on the
+              total vaccinated population as the denominator. As more people get vaccinated,
+              the number grows. That's why our cumulative value is able to drop.
+              <br><br></p>
+
+            </div>
+            <div align="center">
+              <div class="inline">
+                <iframe width="810" height="910" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_cumu_percent_deaths%2Cviewof+symbolLegend"></iframe>
+              </div>
+
+              <div class="inline">
+                <iframe width="810" height="820" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_weekly_percent_deaths"></iframe>
+              </div>
             </div>
 
-            <br>
-            <br>
+            <br><br>
+
+            <div class="rtmargin500">
+            <h3>Counts of Deaths by Manufacturer</h3>
+            <p>Comparative counts of deaths from COVID-19 and alleged deaths from
+              the vaccine, according to the VAERS dataset.
+            <br><br></p>
+          </div>
+
+            <div align="center">
+              <div class="inline">
+                <iframe width="810" height="870" frameborder="0"
+src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_cumu_deaths%2Cviewof+symbolLegend"></iframe>
+              </div>
+
+              <div class="inline">
+                <iframe width="810" height="780" frameborder="0"
+src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_weekly_deaths"></iframe>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+        </div>
+
+
+
+          <div class="rtmargin500">
             <br>
             <h2>Vaccine Adverse Reactions</h2>
             In this visualization, we explore the number and prevelance of vaccine reactions
@@ -96,40 +213,95 @@
             <br>
             <br>
             <br>
+          </div>
 
-              <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'age')" id="defaultOpen">age</button>
-                <button class="tablinks" onclick="openTab(event, 'manufacturer')">manufacturers</button>
+            <div class="leftrightmargin">
+              <div class="tab left">
+                <button class="tablinks2" onclick="openTab2(event, 'age_2')" id="defaultOpen2">age</button>
+                <button class="tablinks2" onclick="openTab2(event, 'manufacturer_2')">manufacturers</button>
               </div>
 
             <!-- Tab content -->
-              <div id="age" class="tabcontent">
-                <h3>Age</h3>
-                <p>age vis here.</p>
+              <div id="age_2" class="tabcontent2">
+                <div class="rtmargin500">
+                  <p>To interact with the visualizations, select an age group from the
+                  drop down menu to see the time series of percentage of vaccine reactions.
+                   You can also choose whether you want to look
+                  at fully vaccinated or partial vaccinated individuals.
+                  <br><br>
+
+                  Hover over the chart for additional details.</p>
+                  <br><br>
+
+                  <h3>Cumulative percent of vaccine reaction severity by age</h3>
+                  <p>Percentages are calculated based on the
+                  total vaccinated population as the denominator. As more people get vaccinated,
+                  the number grows, which means it's possible for our cumulative percent to drop.
+                  <br><br></p>
+
+                </div>
+                <div align="center">
+                    <iframe width="1100" height="790" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=age_vaccine_rxns2"></iframe>
+                </div>
               </div>
 
-              <div id="manufacturer" class="tabcontent">
-                <h3>Manufacturer</h3>
-                <p>manufacturer vis here.</p>
-              </div>
 
-            <br>
-            <br>
-            <br>
+              <div id="manufacturer_2" class="tabcontent2">
+                <div class="rtmargin500">
+                  <p>To interact with the visualizations, select a vaccine manufacturer from the
+                  drop down menu to see the time series of percentage of vaccine reactions.
+                   You can also choose whether you want to look
+                  at fully vaccinated or partial vaccinated individuals.
+                  <br><br>
+
+                  Hover over the chart for additional details.</p>
+                  <br><br>
+
+                  <h3>Cumulative percent of vaccine reaction severity by Manufacturer</h3>
+                  <p>Percentages are calculated based on the
+                  total vaccinated population as the denominator. As more people get vaccinated,
+                  the number grows, which means it's possible for our cumulative percent to drop.
+                  <br><br></p>
+
+                </div>
+                <div align="center">
+                    <iframe width="1100" height="800" frameborder="0"
+  src="https://observablehq.com/embed/791c9e9a7c03c28b?cells=manu_vaccine_rxns2"></iframe>
+                </div>
+              </div>
+            <br><br>
+          </div>
+            <div class="lightgray">
+              <div class="leftrightmargin"
+
+              <br><br>
+
+
             <h2>Vaccine Symptom Exploration and Breakdown</h2>
             Let's take a look at which symptoms were most commonly reported.
+
+            <iframe width="100%" height="500" frameborder="0"
+  src="https://observablehq.com/embed/@berkeleyvis/dbcrossfilter?cells=svg"></iframe>
+</div>
 
             <br>
             <br>
 
           </p>
+          </div>
         </section>
 
         <section id="about" class="margin0white">
           <br>
           <h2>about us</h2>
           We're a team of students from the UC Berkeley Master's in Data Science
-          and information program.
+          and Information program. This is our final project for w209, Data Visualization, in which we have utilized
+          tools such as D3, Vega-lite, and Altair to succinctly convey big data. In this project, we are seeking to
+          find creative and unique visualizations that share COVID and COVID vaccine data in a new light.
+          <br>
+          <br>
+          - Dahler, Emily, Menglu, and Nicole
 
           </p>
         </section>
